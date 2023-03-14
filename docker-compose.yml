@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Dolphin/Dockerfile
+    ports:
+      - '80:80'
+    environment:
+      - ASPNETCORE_URLS=http://+:80
